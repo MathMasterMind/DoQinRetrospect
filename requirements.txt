@@ -1,0 +1,4 @@
+dnslib
+scapy
+requests 
+beautifulsoup4
