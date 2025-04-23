@@ -47,7 +47,7 @@ async def doq_query(resolver, name):
 with open("addresses.txt", "r") as f:
     for line in f:
         try:
-            hostname, ip = [item.strip() for item in line.split(",")]
+            ip, hostname = [item.strip() for item in line.split(",")]
         except ValueError:
             print(f"⚠️ Skipping invalid line: {line}")
 

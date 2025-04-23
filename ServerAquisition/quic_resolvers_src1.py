@@ -25,7 +25,8 @@ def resolve_hostnames(quic_urls):
                         ip_list.append(ip)
 
                 resolved[hostname] = ip_list
-                print(f"✅ {hostname} → {', '.join(ip_list)}")
+                for ip in ip_list:
+                    print(f"{ip}, {hostname}")
             else:
                 print(f"⚠️ Could not parse hostname from {url}")
         except Exception as e:
